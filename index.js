@@ -1,0 +1,5 @@
+const express = require("express")
+const app = express()
+require('dotenv').config()
+app.use('/',require('./routes/homeroutes'))
+app.listen(process.env.PORT,()=>console.log(`Port is ${process.env.PORT}`))
